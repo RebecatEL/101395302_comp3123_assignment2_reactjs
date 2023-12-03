@@ -1,0 +1,32 @@
+{
+    "version":2,
+    "builds":[
+        {
+            "src":"index.js",
+            "use":"@vercel/node"
+        }
+    ],
+    "routes":[
+        {
+            "src":"/(.*)",
+            "dest":"/(.*)",
+            "methods":[
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE",
+                "OPTIONS"
+            ],
+            "headers":{
+                "Access-Control-Allow-Origin":"*",
+                "Access-Control-Allow-Methods":"GET, POST, DELETE, OPTIONS, PATCH, PUT",
+                "Access-Control-Allow-Headers":"X-Requested-With, Content-Type, Origin, Authorization, Accept, Accept-Version, Security-Token, Accept-Encoding, X-CSRF-Token, X-Api-Key, Cache-Control, X-File-Name, Content-Length, Content-MD5, Date, X-Api-Version",
+                "Access-Control-Allow-Credentials":"true"
+            }
+        }
+    ]
+    
+
+      
+}
